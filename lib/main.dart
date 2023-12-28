@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class Trial extends StatefulWidget {
 }
 
 class _TrialState extends State<Trial> {
+  var _volume = 10.0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,8 +21,8 @@ class _TrialState extends State<Trial> {
         appBar: AppBar(
           backgroundColor: Colors.pink,
         ),
-        drawer: Drawer(
-          backgroundColor: Color.fromARGB(255, 146, 182, 248),
+        endDrawer: Drawer(
+          backgroundColor: const Color.fromARGB(255, 146, 182, 248),
           child: Column(
             children: <Widget>[
               const UserAccountsDrawerHeader(
@@ -39,9 +41,9 @@ class _TrialState extends State<Trial> {
                 title: const Text("Prakash"),
                 leading: IconButton(
                   onPressed: () {
-                    print("prakash");
+                    
                   },
-                  icon: Icon(Icons.mail),
+                  icon: const Icon(Icons.mail),
                 ),
               ),
               const Divider(
@@ -50,6 +52,18 @@ class _TrialState extends State<Trial> {
             ],
           ),
         ),
+        body:  Center(
+          child : Ink(
+            decoration: const ShapeDecoration(
+              color: Colors.blueAccent,
+              shape: CircleBorder(
+              ),
+            ),
+             child : IconButton(
+                icon : const Icon(Icons.add), onPressed: () {  },
+              )
+          )
+      ),
       ),
     );
   }
