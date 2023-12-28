@@ -19,11 +19,35 @@ class _TrialState extends State<Trial> {
         appBar: AppBar(
           backgroundColor: Colors.pink,
         ),
-        drawer: const Drawer(
-          backgroundColor: Colors.lightGreen,
-          child: UserAccountsDrawerHeader(
-            accountName: Text("Prakash"),
-            accountEmail: Text("prakash63690@gmail.com"),
+        drawer: Drawer(
+          backgroundColor: Color.fromARGB(255, 146, 182, 248),
+          child: Column(
+            children: <Widget>[
+              const UserAccountsDrawerHeader(
+                accountName: Text("Prakash"),
+                accountEmail: Text("prakash63690@gmail.com"),
+                currentAccountPicture: CircleAvatar(),
+              ),
+              const ListTile(
+                title: Text("Prakash"),
+                leading: Icon(Icons.mail),
+              ),
+              const Divider(
+                endIndent: 0.5,
+              ),
+              ListTile(
+                title: const Text("Prakash"),
+                leading: IconButton(
+                  onPressed: () {
+                    print("prakash");
+                  },
+                  icon: Icon(Icons.mail),
+                ),
+              ),
+              const Divider(
+                endIndent: 0.5,
+              ),
+            ],
           ),
         ),
       ),
