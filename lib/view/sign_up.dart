@@ -12,6 +12,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+          appBar: AppBar(
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.grey.withOpacity(0.6),
+                  Colors.pink.withOpacity(0.6),
+                ]
+              )
+            ),
+          ),
+          leading: const BackButton(),
+        ),
         body: Stack(
           children: <Widget>[
             Container(
