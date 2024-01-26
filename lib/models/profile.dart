@@ -100,9 +100,9 @@ class _ProfileState extends State<Profile> {
                   if (profileImagePath.isEmpty)
                     Positioned(
                       top : 55,
-                      right: 65,
+                      right: 55,
                       child: IconButton(
-                        icon: const Icon(Icons.camera_alt),
+                        icon: const Icon(Icons.camera_alt, size: 25,),
                         onPressed: () {
                           _pickImage();
                         },
